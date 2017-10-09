@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ZonePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar [color]="'dark'">
+    <ion-title>ZonePage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row style="border-bottom: 1px solid gray;">
+      <ion-col col-4 text-center>
+        <ion-row>
+<ion-col>
+    <img class="profile-pic" src="assets/img/mugabe.jpg"/>
+</ion-col>
+        </ion-row>
+        <ion-row>
+<ion-col>
+    <ion-icon name="ios-bulb-outline"></ion-icon>
+</ion-col>
+        </ion-row>
+
+
+      </ion-col>
+      <ion-col col-8>
+          <ion-icon class="share" name="md-share"></ion-icon>
+        <ion-item class="post">
+            <ion-textarea placeholder="Enter your opinion" type="textarea"></ion-textarea>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item *ngFor="let row of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-avatar item-start>
+            <img class="profile-pic" src="assets/img/mugabe.jpg"/>
+        </ion-avatar>
+        <h2>Kim Jong-Un</h2>
+        <h3>
+          Now
+        </h3>
+        <p>
+            A demonstration in London against Robert Mugabe. Protests are discouraged by Zimbabwean police in Zimbabwe
+        </p>
+      </ion-item>
+ 
+    </ion-list>
+  </ion-grid>
+</ion-content>

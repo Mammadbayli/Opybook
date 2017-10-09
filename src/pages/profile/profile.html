@@ -1,0 +1,103 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar [color]="'dark'">
+    <ion-title>ProfilePage</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment" color="dark">
+        <ion-segment-button value="about">
+          ABOUT
+        </ion-segment-button>
+        <ion-segment-button value="photos">
+          PHOTOS
+        </ion-segment-button>
+        <ion-segment-button value="videos">
+          VIDEOS
+        </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+        <ion-grid *ngIf="segment==='about'">
+          <ion-row>
+            <ion-col>
+                <img class="profile-pic" src="assets/img/mugabe.jpg"/>
+            </ion-col>
+            <ion-col>
+              <ion-row>
+                <ion-col>
+                    <h1>Robert Mugabe</h1>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-note>
+                        The President of Zimbabwe is the head of state of Zimbabwe, elected by popular majority vote. The office of President was held by Canaan Banana from the country's independence in 1980 until 1987 and then by the current incumbent, Robert Mugabe.
+                    </ion-note>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col text-center>
+              <h2>Opyscore</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col text-center>
+              <ion-icon name="md-add"></ion-icon>
+            </ion-col>
+            <ion-col text-center>
+                <ion-icon name="md-remove"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngFor="let row of [1,2,3,4,5,6,7,8,9,10]">
+              <ion-col text-center>
+                <ion-icon style="font-size: 2em" name="md-contact"></ion-icon>
+              </ion-col>
+              <ion-col text-center>
+                  <ion-icon style="font-size: 2em" name="md-contact"></ion-icon>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col text-center>
+                  <h2>Strories</h2>
+                </ion-col>
+              </ion-row>
+        </ion-grid>
+
+        <ion-grid *ngIf="segment==='photos'">
+          <ion-row *ngFor="let row of [1,2,3,4,5,6,7,8,9,10]">
+            <ion-col>
+              <img src="assets/img/zimbabwe.jpg"/>
+            </ion-col>
+            <ion-col>
+                <img src="assets/img/zimbabwe.jpg"/>
+              </ion-col>
+              <ion-col>
+                  <img src="assets/img/zimbabwe.jpg"/>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid *ngIf="segment==='videos'">
+            <ion-row *ngFor="let row of [1,2,3,4,5,6,7,8,9,10]">
+              <ion-col>
+                <img src="assets/img/video.jpeg"/>
+              </ion-col>
+              <ion-col>
+                  <img src="assets/img/video.jpeg"/>
+                </ion-col>
+                <ion-col>
+                    <img src="assets/img/video.jpeg"/>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+</ion-content>
